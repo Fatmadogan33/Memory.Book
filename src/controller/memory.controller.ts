@@ -17,7 +17,7 @@ export class MemoryController extends BaseController{
 
   getAllMemories(req: express.Request, res: express.Response, next: express.NextFunction) {
     this.memoryService
-      .listMemory()
+      .getAllMemory()
       .then((memory) => {
         return res.status(201).send(memory);
       })
